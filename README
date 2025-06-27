@@ -1,32 +1,72 @@
-Posts Management API
-A RESTful API for managing posts with user authentication, built with Node.js, TypeScript, Prisma, and PostgreSQL.
+# Posts Management API
 
- Features
-User Authentication: JWT-based authentication system
-Posts Management: CRUD operations for posts
-RESTful Design: Follows REST principles and best practices
-Type Safety: Built with TypeScript
-Database: PostgreSQL with Prisma ORM
-Documentation: OpenAPI/Swagger documentation
-Error Handling: Comprehensive error responses
-Validation: Request validation with proper status codes
+A secure, RESTful API for managing blog posts with user authentication. Built using **Node.js**, **TypeScript**, **Prisma**, and **PostgreSQL**. The project follows industry best practices including validation, structured error handling, and OpenAPI documentation.
 
-Getting Started
-Option 1: Local Setup
-Clone the repository
+---
 
-Install dependencies
+## Features
 
-npm install
-Configure environment variables
-cp .env.example .env
+* User Authentication: JWT-based authentication system
+* Posts Management: Create, Read, Update, and Delete (CRUD) operations for posts
+* RESTful Design: Clean endpoint structure using appropriate HTTP methods
+* Type Safety: Fully implemented with TypeScript
+* Database: PostgreSQL with Prisma ORM
+* Documentation: Auto-generated API docs using Swagger/OpenAPI
+* Error Handling: Centralized and descriptive error responses
+* Input Validation: Request validation with meaningful status codes
 
-The API will be available at http://localhost:3333/api
+---
 
- API Documentation
-The API documentation is available at:
-Swagger UI: http://localhost:3000/api-docs
+## Getting Started
 
-Testing
-Postman Collection
- (https://documenter.getpostman.com/view/31029158/2sB2xFenGp) to test all endpoints.
+### Option 1: Local Setup
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/posts-api-assessment.git
+   cd posts-api-assessment
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Configure environment variables:
+
+   Update `.env` with your local PostgreSQL connection details.
+
+4. Run Prisma migrations and start the development server:
+
+   ```bash
+   npx prisma migrate dev --name init
+   npm run dev
+   ```
+
+The API will be available at:
+`http://localhost:3000/api/v1`
+
+---
+
+## API Documentation
+
+View the full Swagger/OpenAPI documentation at:
+`http://localhost:3000/api-docs`
+
+This includes all endpoints, request/response models, authentication setup, and error formats.
+
+---
+
+## Testing the API
+
+You can test all endpoints using the Postman collection below:
+
+**Postman Documentation**
+[https://documenter.getpostman.com/view/31029158/2sB2xFenGp](https://documenter.getpostman.com/view/31029158/2sB2xFenGp)
+
+It includes:
+
+* Authentication: register, login, profile
+* Post operations: create, read, get, update, delete
