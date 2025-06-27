@@ -1,0 +1,41 @@
+Posts Management API
+A RESTful API for managing posts with user authentication, built with Node.js, TypeScript, Prisma, and PostgreSQL.
+
+ Features
+User Authentication: JWT-based authentication system
+Posts Management: CRUD operations for posts
+RESTful Design: Follows REST principles and best practices
+Type Safety: Built with TypeScript
+Database: PostgreSQL with Prisma ORM
+Documentation: OpenAPI/Swagger documentation
+Error Handling: Comprehensive error responses
+Validation: Request validation with proper status codes
+
+Getting Started
+Option 1: Local Setup
+
+Clone the repository
+
+Install dependencies
+
+npm install
+Configure environment variables
+cp .env.example .env
+Setup database
+
+For PostgreSQL: Make sure your PostgreSQL server is running and update the database credentials in the .env file.
+Run migrations and seed the database
+
+node ace migration:run
+node ace db:seed
+Start the development server
+node ace serve --watch
+The API will be available at http://localhost:3333/api
+
+ API Documentation
+The API documentation is available at:
+Swagger UI: http://localhost:3000/api-docs
+
+Testing
+Postman Collection
+ (https://documenter.getpostman.com/view/31029158/2sB2xFenGp) to test all endpoints.
